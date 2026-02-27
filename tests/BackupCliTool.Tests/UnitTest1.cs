@@ -1,4 +1,4 @@
-﻿namespace BackupCliTool.Tests;
+namespace BackupCliTool.Tests;
 
 public class UnitTest1
 {

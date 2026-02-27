@@ -1,6 +1,6 @@
-﻿using System.CommandLine;
+using System.CommandLine;
 
-namespace scl;
+namespace BackupCliTool;
 
 class Program
 {
@@ -16,8 +16,11 @@ class Program
 
         rootCommand.SetAction(parseResult =>
         {
-            FileInfo parsedFile = parseResult.GetValue(fileOption);
-            ReadFile(parsedFile);
+            FileInfo? parsedFile = parseResult.GetValue(fileOption);
+            if (parsedFile != null)
+            {
+                ReadFile(parsedFile);
+            }
             return 0;
         });
 
