@@ -62,7 +62,7 @@ jobs:
           set -euo pipefail
           output="$(dotnet list package --vulnerable --include-transitive || true)"
           echo "$output"
-          if echo "$output" | grep -qiE "has the following vulnerable packages|vulnerab"; then
+          if echo "$output" | grep -qiE "has the following vulnerable packages"; then
             echo "::error::Vulnerable NuGet packages detected. See log above."
             exit 1
           fi
