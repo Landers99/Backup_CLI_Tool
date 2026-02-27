@@ -1,6 +1,6 @@
-﻿using System.CommandLine;
+using System.CommandLine;
 
-namespace scl;
+namespace BackupCliTool;
 
 class Program
 {
